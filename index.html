@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ribyon Studios - Brand Systems for Serious Growth</title>
+    <meta name="title" content="Ribyon Studios - Brand Systems for Serious Growth">
+    <meta name="description" content="Expert brand identity, web design, and digital strategy services. We build brand systems for companies serious about growth.">
+    <meta name="keywords" content="brand identity, web design, digital strategy, brand design, website development, digital marketing, brand consulting, web development agency">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="Ribyon Studios">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ribyonstudios.com/">
+    <meta property="og:title" content="Ribyon Studios - Brand Systems for Serious Growth">
+    <meta property="og:description" content="We build brand systems for companies serious about growth.">
+    <meta property="og:image" content="https://ribyonstudios.com/images/RIBYON%20NEON%20LOGO.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ribyonstudios.com/">
+    <meta property="twitter:title" content="Ribyon Studios - Brand Systems for Serious Growth">
+    <meta property="twitter:description" content="We build brand systems for companies serious about growth.">
+    <meta property="twitter:image" content="https://ribyonstudios.com/images/RIBYON%20NEON%20LOGO.png">
+    <link rel="canonical" href="https://ribyonstudios.com/">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="nav.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a class='logo' href='/'><img src="images/RIBYON NEON LOGO.png" alt="Ribyon Studios"></a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                <div class="hamburger"><span></span><span></span><span></span></div>
+            </button>
+            <div class="nav-menu" id="navMenu">
+                <div class="nav-links">
+                    <a class="active" href='/'>Home</a>
+                    <a href='products.html'>Services</a>
+                    <a href='about.html'>About</a>
+                    <a href='pricing.html'>Pricing</a>
+                    <a href='contact.html'>Contact</a>
+                    <a href='blog.html'>Blog</a>
+                </div>
+                <button class="btn-get-started" onclick="location.href='contact.html'">Get Started</button>
+            </div>
+        </div>
+        <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
+    </nav>
+
+    <header class="hero-fullwidth">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1920&h=1080&fit=crop&q=80" alt="Modern office workspace" loading="eager" fetchpriority="high">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content-fullwidth">
+                <h1>Brand systems for companies<br>serious about growth.</h1>
+                <p class="hero-subtitle">We design the identity, strategy, and digital presence that ambitious businesses need to compete — and win.</p>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="window.location.href='contact.html'">
+                        Get Started
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 10h10M12 7l3 3-3 3"/>
+                        </svg>
+                    </button>
+                    <button class="btn-hero-outline" onclick="window.location.href='products.html'">
+                        Explore Our Services
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="10" cy="10" r="3"/>
+                            <path d="M10 1v2M10 17v2M1 10h2M17 10h2M3.93 3.93l1.41 1.41M14.66 14.66l1.41 1.41M3.93 16.07l1.41-1.41M14.66 5.34l1.41-1.41"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="trust-indicators">
+                    <div class="trust-stat">
+                        <div class="stat-number" data-target="15" data-suffix="+">0+</div>
+                        <div class="stat-label">Brands Served</div>
+                    </div>
+                    <div class="trust-stat">
+                        <div class="stat-number" data-target="6" data-suffix="+">0+</div>
+                        <div class="stat-label">Industries Served</div>
+                    </div>
+                    <div class="trust-stat">
+                        <div class="stat-number" data-target="98" data-suffix="%">0%</div>
+                        <div class="stat-label">Client Retention</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="logo-strip">
+        <div class="logo-strip-inner">
+            <div class="logo-track">
+                <div class="logo-item"><img src="images/RIBYON NEON LOGO.png" alt="Ribyon" loading="lazy"></div>
+                <div class="logo-item"><img src="images/RIBYON NEON LOGO.png" alt="Ribyon" loading="lazy"></div>
+                <div class="logo-item"><img src="images/RIBYON NEON LOGO.png" alt="Ribyon" loading="lazy"></div>
+                <div class="logo-item"><img src="images/RIBYON NEON LOGO.png" alt="Ribyon" loading="lazy"></div>
+                <div class="logo-item"><img src="images/RIBYON NEON LOGO.png" alt="Ribyon" loading="lazy"></div>
+                <div class="logo-item"><img src="images/RIBYON NEON LOGO.png" alt="Ribyon" loading="lazy"></div>
+                <div class="logo-item"><img src="images/RIBYON NEON LOGO.png" alt="Ribyon" loading="lazy"></div>
+                <div class="logo-item"><img src="images/RIBYON NEON LOGO.png" alt="Ribyon" loading="lazy"></div>
+                <div class="logo-item"><img src="images/RIBYON NEON LOGO.png" alt="Ribyon" loading="lazy"></div>
+                <div class="logo-item"><img src="images/RIBYON NEON LOGO.png" alt="Ribyon" loading="lazy"></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="solutions" aria-labelledby="services-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="services-heading">Three services. One outcome.</h2>
+                <p>Identity, digital presence, and strategy. Built to work together.</p>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="card-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                            <polyline points="2 17 12 22 22 17"/>
+                            <polyline points="2 12 12 17 22 12"/>
+                        </svg>
+                    </div>
+                    <h3>Brand Identity & Design</h3>
+                    <p>Craft a visual language that communicates trust, clarity, and distinction.</p>
+                    <a class='card-link' href='products.html'>Learn more →</a>
+                </div>
+                <div class="solution-card">
+                    <div class="card-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>Website & Digital Experience</h3>
+                    <p>Build responsive, high-performance websites that engage users and deliver measurable results.</p>
+                    <a class='card-link' href='products.html'>Learn more →</a>
+                </div>
+                <div class="solution-card">
+                    <div class="card-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                        </svg>
+                    </div>
+                    <h3>Digital Strategy & Advisory</h3>
+                    <p>Bring clarity to your brand, marketing, and growth roadmap with expert guidance and data-driven insights.</p>
+                    <a class='card-link' href='products.html'>Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="segment-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Where are you right now?</h2>
+                <p>We work differently depending on your stage. Find your path.</p>
+            </div>
+            <div class="segment-grid">
+                <a href="pricing.html#starter" class="segment-card">
+                    <div class="segment-card-top">
+                        <div class="segment-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                                <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+                            </svg>
+                        </div>
+                        <div class="segment-stage">Startup / Personal Brand</div>
+                        <h3>You're launching and need a brand that works from day one.</h3>
+                    </div>
+                    <div class="segment-card-body">
+                        <p>You don't have time for complexity. You need a clean, professional identity that gets you to market fast and makes the right first impression.</p>
+                        <ul class="segment-list">
+                            <li>Logo & visual identity</li>
+                            <li>Brand guidelines</li>
+                            <li>Social media templates</li>
+                        </ul>
+                    </div>
+                    <div class="segment-card-footer">
+                        <span class="segment-package">Starter Brand Kit</span>
+                        <span class="segment-cta">See what's included →</span>
+                    </div>
+                </a>
+                <a href="pricing.html#growth" class="segment-card segment-card--featured">
+                    <div class="segment-card-top">
+                        <div class="segment-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                                <polyline points="16 7 22 7 22 13"/>
+                            </svg>
+                        </div>
+                        <div class="segment-stage">SME / Growth Brand</div>
+                        <h3>You're scaling and your brand needs to keep up.</h3>
+                    </div>
+                    <div class="segment-card-body">
+                        <p>You've outgrown your current brand. You need consistency across every channel, a website that converts, and a system your team can actually use.</p>
+                        <ul class="segment-list">
+                            <li>Full brand system</li>
+                            <li>Website design & development</li>
+                            <li>Social media design system</li>
+                        </ul>
+                    </div>
+                    <div class="segment-card-footer">
+                        <span class="segment-package">Growth Brand Kit</span>
+                        <span class="segment-cta">See what's included →</span>
+                    </div>
+                </a>
+                <a href="contact.html" class="segment-card">
+                    <div class="segment-card-top">
+                        <div class="segment-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+                                <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
+                                <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/>
+                                <path d="M10 6h4M10 10h4M10 14h4M10 18h4"/>
+                            </svg>
+                        </div>
+                        <div class="segment-stage">Enterprise / Corporate</div>
+                        <h3>You're established and need strategic positioning at scale.</h3>
+                    </div>
+                    <div class="segment-card-body">
+                        <p>You need more than a rebrand. You need a strategic partner who understands your market, your audience, and what it takes to lead it.</p>
+                        <ul class="segment-list">
+                            <li>Brand strategy & positioning</li>
+                            <li>Enterprise identity system</li>
+                            <li>Multi-channel rollout</li>
+                        </ul>
+                    </div>
+                    <div class="segment-card-footer">
+                        <span class="segment-package">Premium Brand System</span>
+                        <span class="segment-cta">Let's talk →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-section">
+        <div class="container">
+            <div class="results-header">
+                <span class="results-eyebrow">Client Results</span>
+                <h2>The work speaks<br>for itself.</h2>
+                <a href="about.html#case-studies" class="results-all">View all case studies →</a>
+            </div>
+            <div class="results-grid">
+                <a href="case-studies/tronavo-rebrand.html" class="result-card">
+                    <div class="result-card-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&h=600&fit=crop&q=80" alt="Tronavo Rebrand">
+                        <div class="result-card-overlay">
+                            <span class="result-tag">Rebrand</span>
+                        </div>
+                    </div>
+                    <div class="result-card-body">
+                        <div class="result-metric">
+                            <span class="result-num">↑ 40%</span>
+                            <span class="result-label">Increase in inbound enquiries</span>
+                        </div>
+                        <h3>Tronavo</h3>
+                        <p>A full rebrand and brand system that gave Tronavo a professional identity built for growth. Delivered in 6 weeks.</p>
+                        <span class="result-link">Read the case study →</span>
+                    </div>
+                </a>
+                <a href="case-studies/galactic-core.html" class="result-card">
+                    <div class="result-card-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&h=600&fit=crop&q=80" alt="Galactic Core Platform">
+                        <div class="result-card-overlay">
+                            <span class="result-tag">Web Design</span>
+                        </div>
+                    </div>
+                    <div class="result-card-body">
+                        <div class="result-metric">
+                            <span class="result-num">6 wks</span>
+                            <span class="result-label">Design to live launch</span>
+                        </div>
+                        <h3>Galactic Core — Tybrite Labs</h3>
+                        <p>A commerce infrastructure platform designed, built, and launched in 6 weeks with 95% user satisfaction.</p>
+                        <span class="result-link">Read the case study →</span>
+                    </div>
+                </a>
+                <a href="case-studies/safari-yetu.html" class="result-card">
+                    <div class="result-card-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=900&h=600&fit=crop&q=80" alt="Safari Yetu Adventures">
+                        <div class="result-card-overlay">
+                            <span class="result-tag">Social Media</span>
+                        </div>
+                    </div>
+                    <div class="result-card-body">
+                        <div class="result-metric">
+                            <span class="result-num">↑ 62%</span>
+                            <span class="result-label">Increase in profile reach</span>
+                        </div>
+                        <h3>Safari Yetu Adventures</h3>
+                        <p>A social media design system that helped an East African safari operator build trust with international travellers. Average engagement: 3.1%.</p>
+                        <span class="result-link">Read the case study →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-section">
+        <div class="container">
+            <div class="why-header">
+                <span class="why-eyebrow">Why Ribyon</span>
+                <h2>What makes us different.</h2>
+                <p>Most agencies deliver files. We deliver systems built to run without us.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-num">01</div>
+                    <h3>Strategy before design. Always.</h3>
+                    <p>We don't start designing until we understand your market, your audience, and your positioning. Every design decision has a documented reason, not a personal preference.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">02</div>
+                    <h3>You own everything. Completely.</h3>
+                    <p>Every file, every template, every guideline is yours. We hand over a brand system your team can run independently. No retainer required to use what we built.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">03</div>
+                    <h3>Fixed scope. No surprises.</h3>
+                    <p>We define the project before we start it. You know exactly what you're getting, when you're getting it, and what it costs. No scope creep. No revision loops.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">04</div>
+                    <h3>Built for your stage, not the average client.</h3>
+                    <p>A startup needs speed. An SME needs consistency. An enterprise needs strategy. We don't sell the same package to everyone. We build what your stage actually requires.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">05</div>
+                    <h3>Results you can measure.</h3>
+                    <p>Brand work should move numbers. We track engagement, conversion, and recognition and show you the data. If it's not working, we fix it.</p>
+                </div>
+                <div class="why-card why-card--dark">
+                    <div class="why-stat">98%</div>
+                    <p>of clients return for their next project or phase.</p>
+                    <a href="about.html#case-studies" class="why-link">See the work →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solutions" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-content">
+                    <h2>Ready to build a brand that performs?</h2>
+                    <p>Tell us where you are. We'll tell you exactly what you need and what it costs.</p>
+                </div>
+                <div class="cta-actions">
+                    <button class="btn-primary btn-large" onclick="window.location.href='contact.html'">
+                        Start the Conversation
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 10h10M12 7l3 3-3 3"/>
+                        </svg>
+                    </button>
+                    <button class="btn-secondary-outline btn-large" onclick="window.location.href='pricing.html'">
+                        View Pricing
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">Ribyon Studios</div>
+                    <p>Brand Systems for Serious Growth</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href='about.html'>About</a></li>
+                        <li><a href='contact.html'>Contact</a></li>
+                        <li><a href='blog.html'>Blog</a></li>
+                        <li><a href='pricing.html'>Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href='products.html#brand-identity'>Brand Identity</a></li>
+                        <li><a href='products.html#brand-identity'>Web Design</a></li>
+                        <li><a href='products.html#brand-identity'>Brand Strategy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href='blog.html'>Blog</a></li>
+                        <li><a href='about.html#case-studies'>Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href='privacy-policy.html'>Privacy Policy</a></li>
+                        <li><a href='terms-of-service.html'>Terms of Service</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Ribyon Studios. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    (function(){
+      var els = document.querySelectorAll(".stat-number");
+      if (!els.length) return;
+      function animate(el) {
+        var target = parseInt(el.getAttribute("data-target") || "0");
+        var suffix = el.getAttribute("data-suffix") || "";
+        var duration = 1800;
+        var start = performance.now();
+        function tick(now) {
+          var p = Math.min((now - start) / duration, 1);
+          var ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.floor(ease * target) + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+          else el.textContent = target + suffix;
+        }
+        requestAnimationFrame(tick);
+      }
+      els.forEach(function(el, i) { setTimeout(function(){ animate(el); }, i * 200); });
+    })();
+    </script>
+</body>
+</html>
