@@ -2315,14 +2315,14 @@ a:hover {
 .process-step-card h3 {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--gray-800);
+  color: #ffffff;
   margin-bottom: 0;
   line-height: 1.2;
 }
 
 .process-step-card p {
   font-size: 0.875rem;
-  color: var(--gray-500);
+  color: rgba(255,255,255,0.55);
   line-height: 1.7;
   margin-bottom: 1.25rem;
 }
@@ -2339,9 +2339,9 @@ a:hover {
 
 .process-step-card ul li {
   font-size: 0.875rem;
-  color: var(--gray-600);
+  color: rgba(255,255,255,0.6);
   padding: 0.5rem 0 0.5rem 1rem;
-  border-top: 1px solid var(--gray-100);
+  border-top: 1px solid rgba(255,255,255,0.06);
   position: relative;
   line-height: 1.4;
 }
@@ -2361,7 +2361,7 @@ a:hover {
 .process-deliverable {
   margin-top: 1.5rem;
   padding-top: 1.25rem;
-  border-top: 1px solid var(--gray-200);
+  border-top: 1px solid rgba(255,255,255,0.06);
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
@@ -2372,13 +2372,13 @@ a:hover {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--gray-400);
+  color: rgba(255,255,255,0.4);
 }
 
 .process-deliverable strong {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--gray-600);
+  color: rgba(255,255,255,0.65);
 }
 
 .process-footer {
@@ -2388,12 +2388,12 @@ a:hover {
   gap: 2rem;
   margin-top: 2.5rem;
   padding-top: 2rem;
-  border-top: 1px solid var(--gray-200);
+  border-top: 1px solid rgba(255,255,255,0.06);
 }
 
 .process-footer p {
   font-size: 0.9375rem;
-  color: var(--gray-400);
+  color: rgba(255,255,255,0.4);
   margin-bottom: 0;
   font-style: italic;
 }
@@ -2808,9 +2808,9 @@ a:hover {
   font-size: 0.625rem;
   font-weight: 800;
   letter-spacing: 0.12em;
-  color: var(--primary-dark);
-  background: rgba(168,224,10,0.1);
-  border: 1px solid rgba(168,224,10,0.2);
+  color: var(--primary-light);
+  background: rgba(37,99,235,0.15);
+  border: 1px solid rgba(37,99,235,0.25);
   border-radius: var(--radius-full);
   padding: 0.2rem 0.6rem;
   margin-bottom: 1rem;
