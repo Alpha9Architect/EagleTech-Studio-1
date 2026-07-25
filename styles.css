@@ -1462,7 +1462,7 @@ a:hover {
 }
 
 .journey-future .journey-content {
-  background: linear-gradient(135deg, rgba(196, 255, 13, 0.05) 0%, rgba(196, 255, 13, 0.02) 100%);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(37, 99, 235, 0.03) 100%);
   border-color: var(--primary);
   border-style: dashed;
 }
