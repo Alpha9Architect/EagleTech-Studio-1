@@ -323,13 +323,13 @@ a:hover {
   display: flex;
   align-items: center;
   background: var(--bg-card);
-  padding: 0.4rem 0.75rem;
+  padding: 0.35rem 0.75rem;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255,255,255,0.08);
 }
 
 .logo img {
-  height: 36px;
+  height: 30px;
   width: auto;
   display: block;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
@@ -436,7 +436,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .navbar { padding: 0.75rem 0; }
-  .logo img { height: 35px; }
+  .logo img { height: 28px; }
   .mobile-menu-toggle { display: block; }
 
   .nav-menu {
