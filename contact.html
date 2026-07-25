@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EagleTech Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="nav.js" defer></script>
+    <style>
+        .cp-page { background: var(--bg-secondary); }
+        .cp-hero {
+            position: relative;
+            height: 52vh;
+            min-height: 380px;
+            max-height: 560px;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+        }
+        .cp-hero img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
+        }
+        .cp-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to top, rgba(6,10,14,0.97) 0%, rgba(6,10,14,0.6) 50%, rgba(6,10,14,0.2) 100%),
+                linear-gradient(to right, rgba(6,10,14,0.85) 0%, rgba(6,10,14,0.3) 60%, transparent 100%);
+        }
+        .cp-hero-body {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 0 0 3rem;
+        }
+        .cp-hero-body .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        .cp-eyebrow {
+            display: inline-block;
+            font-family: var(--font-primary);
+            font-size: 0.6875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--primary-light);
+            background: rgba(37,99,235,0.15);
+            border: 1px solid rgba(37,99,235,0.25);
+            border-radius: 999px;
+            padding: 0.2rem 0.7rem;
+            margin-bottom: 1rem;
+        }
+        .cp-hero-body h1 {
+            font-family: var(--font-primary);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.75rem;
+        }
+        .cp-hero-body h1 span { color: var(--primary); }
+        .cp-hero-body p {
+            font-family: var(--font-secondary);
+            font-size: 1rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 0;
+        }
+        .cp-body { padding: 4rem 0 5rem; }
+        .cp-body .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        .cp-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .cp-info { display: flex; flex-direction: column; gap: 2rem; }
+        .cp-info-heading h2 {
+            font-family: var(--font-primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+        .cp-info-heading p {
+            font-family: var(--font-secondary);
+            font-size: 0.9375rem;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 0;
+        }
+        .cp-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: var(--radius-xl);
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        .cp-detail:hover { border-color: var(--primary); box-shadow: var(--shadow-sm); }
+        .cp-detail-icon {
+            width: 40px; height: 40px;
+            background: var(--primary);
+            border-radius: var(--radius-md);
+            display: flex; align-items: center; justify-content: center;
+            color: #ffffff; flex-shrink: 0;
+        }
+        .cp-detail-icon svg { width: 18px; height: 18px; }
+        .cp-detail-text h4 {
+            font-family: var(--font-primary);
+            font-size: 0.6875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 0.25rem;
+        }
+        .cp-detail-text p {
+            font-family: var(--font-primary);
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.1rem;
+        }
+        .cp-detail-text small {
+            font-family: var(--font-secondary);
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+        }
+        .cp-trust {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .cp-trust h4 {
+            font-family: var(--font-primary);
+            font-size: 0.625rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 1rem;
+        }
+        .cp-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            font-family: var(--font-secondary);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.65);
+        }
+        .cp-trust-item:last-child { border-bottom: none; }
+        .cp-trust-item svg { color: var(--primary); flex-shrink: 0; }
+        .cp-form-wrap {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .cp-form-head {
+            padding: 2rem 2.5rem 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+        .cp-form-head h2 {
+            font-family: var(--font-primary);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.3rem;
+        }
+        .cp-form-head p {
+            font-family: var(--font-secondary);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 0;
+        }
+        .cp-form { padding: 2rem 2.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+        .cp-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+        .cp-group { display: flex; flex-direction: column; gap: 0.4rem; }
+        .cp-group label {
+            font-family: var(--font-primary);
+            font-size: 0.6875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.5);
+        }
+        .cp-group input,
+        .cp-group select,
+        .cp-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius-md);
+            font-family: var(--font-secondary);
+            font-size: 0.9375rem;
+            color: white;
+            transition: border-color var(--transition-fast), background var(--transition-fast);
+        }
+        .cp-group input::placeholder,
+        .cp-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+        .cp-group input:focus,
+        .cp-group select:focus,
+        .cp-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255,255,255,0.09);
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.08);
+        }
+        .cp-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%232563eb' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+            cursor: pointer;
+        }
+        .cp-group select option { background: #0b1424; color: white; }
+        .cp-group textarea { resize: vertical; min-height: 130px; line-height: 1.6; }
+        .cp-form-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid rgba(255,255,255,0.07);
+        }
+        .cp-privacy {
+            font-family: var(--font-secondary);
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.25);
+            margin-bottom: 0;
+        }
+        .cp-submit {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary);
+            color: #ffffff;
+            border: none;
+            border-radius: var(--radius-full);
+            padding: 0.8rem 2rem;
+            font-family: var(--font-primary);
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            white-space: nowrap;
+        }
+        .cp-submit:hover { background: var(--primary-dark); transform: translateY(-1px); }
+        @media (max-width: 1024px) {
+            .cp-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+        }
+        @media (max-width: 640px) {
+            .cp-row { grid-template-columns: 1fr; }
+            .cp-form { padding: 1.5rem; }
+            .cp-form-head { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body class="cp-page">
+    <nav class="navbar">
+        <div class="container">
+            <a class='logo' href='/'><img src="images/RIBYON NEON LOGO.png" alt="EagleTech Studio"></a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                <div class="hamburger"><span></span><span></span><span></span></div>
+            </button>
+            <div class="nav-menu" id="navMenu">
+                <div class="nav-links">
+                    <a href='/'>Home</a>
+                    <a href='products.html'>Services</a>
+                    <a href='about.html'>About</a>
+                    <a href='pricing.html'>Pricing</a>
+                    <a class='active' href='contact.html'>Contact</a>
+                    <a href='blog.html'>Blog</a>
+                </div>
+                <button class="btn-get-started" onclick="location.href='contact.html'">Get Started</button>
+            </div>
+        </div>
+        <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
+    </nav>
+
+    <section class="cp-hero">
+        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1600&h=900&fit=crop&q=80" alt="Contact EagleTech Studio" loading="eager" fetchpriority="high">
+        <div class="cp-hero-overlay"></div>
+        <div class="cp-hero-body">
+            <div class="container">
+                <span class="cp-eyebrow">Let's Work Together</span>
+                <h1>Get in <span>Touch</span></h1>
+                <p>Have a project in mind? We'll get back to you within one business day.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cp-body">
+        <div class="container">
+            <div class="cp-grid">
+                <div class="cp-info">
+                    <div class="cp-info-heading">
+                        <h2>Let's start a conversation.</h2>
+                        <p>Tell us about your project and we'll respond with a clear plan and honest pricing.</p>
+                    </div>
+                    <div class="cp-detail">
+                        <div class="cp-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="cp-detail-text">
+                            <h4>Email</h4>
+                            <p>hello@eagletechstudio.com</p>
+                            <small>We respond within 24 hours</small>
+                        </div>
+                    </div>
+                    <div class="cp-detail">
+                        <div class="cp-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="cp-detail-text">
+                            <h4>Location</h4>
+                            <p>Nairobi, Kenya</p>
+                            <small>Serving clients globally</small>
+                        </div>
+                    </div>
+                    <div class="cp-trust">
+                        <h4>What to expect</h4>
+                        <div class="cp-trust-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Response within one business day
+                        </div>
+                        <div class="cp-trust-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Free initial consultation call
+                        </div>
+                        <div class="cp-trust-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            No commitment required
+                        </div>
+                        <div class="cp-trust-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Clear project scoping & pricing
+                        </div>
+                    </div>
+                </div>
+                <div class="cp-form-wrap">
+                    <div class="cp-form-head">
+                        <h2>Send us a message</h2>
+                        <p>Fill in the details and we'll be in touch shortly.</p>
+                    </div>
+                    <form class="cp-form" onsubmit="cpSend(event)">
+                        <div class="cp-row">
+                            <div class="cp-group">
+                                <label for="cp-name">Full Name</label>
+                                <input type="text" id="cp-name" placeholder="Your name" required>
+                            </div>
+                            <div class="cp-group">
+                                <label for="cp-email">Email Address</label>
+                                <input type="email" id="cp-email" placeholder="you@company.com" required>
+                            </div>
+                        </div>
+                        <div class="cp-group">
+                            <label for="cp-company">Company / Brand</label>
+                            <input type="text" id="cp-company" placeholder="Optional">
+                        </div>
+                        <div class="cp-group">
+                            <label for="cp-service">Service Interested In</label>
+                            <select id="cp-service" required>
+                                <option value="">Select a service</option>
+                                <option>Brand Identity System</option>
+                                <option>Brand Strategy</option>
+                                <option>Social Media Design System</option>
+                                <option>Web Design & Development</option>
+                                <option>Starter Brand Kit</option>
+                                <option>Growth Brand Kit</option>
+                                <option>Premium Brand System</option>
+                                <option>Free Consultation</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="cp-group">
+                            <label for="cp-message">Tell us about your project</label>
+                            <textarea id="cp-message" placeholder="Describe your goals, timeline, and anything else that's relevant..." required></textarea>
+                        </div>
+                        <div class="cp-form-footer">
+                            <p class="cp-privacy">We'll never share your details with third parties.</p>
+                            <button type="submit" class="cp-submit">
+                                Send Message
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">EagleTech Studio</div>
+                    <p>Brand Systems for Serious Growth</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href='about.html'>About</a></li>
+                        <li><a href='contact.html'>Contact</a></li>
+                        <li><a href='blog.html'>Blog</a></li>
+                        <li><a href='pricing.html'>Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href='products.html#brand-identity'>Brand Identity</a></li>
+                        <li><a href='products.html#brand-identity'>Web Design</a></li>
+                        <li><a href='products.html#brand-identity'>Brand Strategy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href='blog.html'>Blog</a></li>
+                        <li><a href='about.html#case-studies'>Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href='privacy-policy.html'>Privacy Policy</a></li>
+                        <li><a href='terms-of-service.html'>Terms of Service</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 EagleTech Studio. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    function cpSend(e) {
+        e.preventDefault();
+        const name    = document.getElementById('cp-name').value;
+        const email   = document.getElementById('cp-email').value;
+        const company = document.getElementById('cp-company').value;
+        const service = document.getElementById('cp-service').value;
+        const message = document.getElementById('cp-message').value;
+        const subject = encodeURIComponent('Project Enquiry — ' + (service || 'General') + ' | ' + name);
+        const body = encodeURIComponent(
+            'Hi EagleTech Studio,\n\nI\'d like to discuss a project.\n\n' +
+            '— About Me —\nName: ' + name + '\nEmail: ' + email +
+            (company ? '\nCompany: ' + company : '') +
+            '\n\n— Project Details —\nService: ' + (service || 'Not specified') +
+            '\n\n— Message —\n' + message +
+            '\n\nLooking forward to hearing from you.\n' + name
+        );
+        window.location.href = 'mailto:hello@eagletechstudio.com?subject=' + subject + '&body=' + body;
+    }
+    </script>
+</body>
+</html>

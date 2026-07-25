@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - EagleTech Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="nav.js" defer></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a class='logo' href='/'><img src="images/RIBYON NEON LOGO.png" alt="EagleTech Studio"></a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                <div class="hamburger"><span></span><span></span><span></span></div>
+            </button>
+            <div class="nav-menu" id="navMenu">
+                <div class="nav-links">
+                    <a href='/'>Home</a>
+                    <a href='products.html'>Services</a>
+                    <a href='about.html'>About</a>
+                    <a href='pricing.html'>Pricing</a>
+                    <a href='contact.html'>Contact</a>
+                    <a class='active' href='blog.html'>Blog</a>
+                </div>
+                <button class="btn-get-started" onclick="location.href='contact.html'">Get Started</button>
+            </div>
+        </div>
+        <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
+    </nav>
+
+    <section class="hero-fullwidth">
+        <div class="hero-background">
+            <img loading="eager" fetchpriority="high" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1600&h=900&fit=crop&q=80" alt="Blog — brand insights and strategy">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content-fullwidth">
+                <div class="badge">Brand Thinking</div>
+                <h1>Brand thinking from <span>EagleTech Studio</span></h1>
+                <p class="hero-subtitle">Brand strategy, identity, and web design. Written by the people who do the work.</p>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="document.getElementById('articles').scrollIntoView({behavior: 'smooth'})">
+                        Browse Articles
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10 4v12M4 10l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="btn-hero-outline" onclick="window.location.href='contact.html'">Subscribe</button>
+                </div>
+                <div class="blog-hero-stats">
+                    <div class="blog-hero-stat">
+                        <span class="blog-hero-num">150+</span>
+                        <span class="blog-hero-label">Articles</span>
+                    </div>
+                    <div class="blog-hero-stat">
+                        <span class="blog-hero-num">25K+</span>
+                        <span class="blog-hero-label">Readers</span>
+                    </div>
+                    <div class="blog-hero-stat">
+                        <span class="blog-hero-num">Weekly</span>
+                        <span class="blog-hero-label">Updates</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solutions" id="articles">
+        <div class="container">
+            <div class="blog-categories">
+                <button class="category-btn active" data-filter="all">All Articles</button>
+                <button class="category-btn" data-filter="brand-strategy">Brand Strategy</button>
+                <button class="category-btn" data-filter="brand-identity">Brand Identity</button>
+                <button class="category-btn" data-filter="web-design">Web Design</button>
+                <button class="category-btn" data-filter="social-media">Social Media</button>
+                <button class="category-btn" data-filter="growth">Growth</button>
+            </div>
+
+            <div class="blog-grid" id="blogGrid">
+                <article class="blog-card featured page-1" data-category="brand-strategy" data-page="1">
+                    <div class="blog-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=900&h=600&fit=crop&q=80" alt="Brand strategy workshop with diverse team">
+                        <div class="blog-category">Brand Strategy</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Nov 14, 2025</span>
+                            <span class="blog-read-time">12 min read</span>
+                        </div>
+                        <h3>The Power of Brand-Driven Automation</h3>
+                        <p>How to scale your brand's voice, values, and personality through technology — without losing what makes you human.</p>
+                        <a class="blog-link" href="blog/brand-driven-automation.html">Read article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card page-1" data-category="brand-strategy" data-page="1">
+                    <div class="blog-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop&q=80" alt="Diverse team in brand strategy session">
+                        <div class="blog-category">Brand Strategy</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Feb 2026</span>
+                            <span class="blog-read-time">10 min read</span>
+                        </div>
+                        <h3>Brand Strategy Is Not Optional</h3>
+                        <p>Without a clear brand strategy, every marketing decision is a guess. Here's how to build the foundation that makes everything else work.</p>
+                        <a class="blog-link" href="blog/strategy-in-digital-marketing.html">Read article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card page-1" data-category="brand-identity" data-page="1">
+                    <div class="blog-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&h=400&fit=crop&q=80" alt="Brand identity design system">
+                        <div class="blog-category">Brand Identity</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Mar 2025</span>
+                            <span class="blog-read-time">9 min read</span>
+                        </div>
+                        <h3>Why Your Visual Identity Is Costing You Clients</h3>
+                        <p>A strong visual identity system isn't decoration — it's a business asset. Here's what separates brands that get remembered from brands that get ignored.</p>
+                        <a class="blog-link" href="blog/memorable-visual-languages.html">Read article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card page-1" data-category="web-design" data-page="1">
+                    <div class="blog-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=600&h=400&fit=crop&q=80" alt="Web design on laptop and mobile">
+                        <div class="blog-category">Web Design</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Jan 2026</span>
+                            <span class="blog-read-time">8 min read</span>
+                        </div>
+                        <h3>Your Website Is Losing You Business</h3>
+                        <p>Most brand websites look fine and perform terribly. Here's why — and the design principles that actually move the needle.</p>
+                        <a class="blog-link" href="blog/web-experiences-that-convert.html">Read article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card page-1" data-category="brand-identity" data-page="1">
+                    <div class="blog-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop&q=80" alt="Diverse team collaborating on brand touchpoints">
+                        <div class="blog-category">Brand Identity</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Apr 2026</span>
+                            <span class="blog-read-time">8 min read</span>
+                        </div>
+                        <h3>Every Touchpoint Is a Brand Moment</h3>
+                        <p>Every interaction a prospect has with your brand either builds or erodes trust. Here's how to design the full experience.</p>
+                        <a class="blog-link" href="blog/customer-journeys-that-convert.html">Read article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card page-1" data-category="growth" data-page="1">
+                    <div class="blog-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&q=80" alt="Diverse team scaling a brand">
+                        <div class="blog-category">Growth</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Nov 2024</span>
+                            <span class="blog-read-time">9 min read</span>
+                        </div>
+                        <h3>How to Scale a Brand Without Losing It</h3>
+                        <p>Growth breaks brands that aren't built for it. Here's how to scale with precision — keeping your identity intact as your business expands.</p>
+                        <a class="blog-link" href="blog/scaling-brands-with-precision.html">Read article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card page-1" data-category="brand-strategy" data-page="1">
+                    <div class="blog-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80" alt="Data analytics and brand decisions">
+                        <div class="blog-category">Brand Strategy</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Jun 2025</span>
+                            <span class="blog-read-time">8 min read</span>
+                        </div>
+                        <h3>What Data-Driven Brand Decisions Actually Look Like</h3>
+                        <p>Data doesn't replace brand intuition — it sharpens it. Here's how to use data to make better brand decisions.</p>
+                        <a class="blog-link" href="blog/data-driven-marketing.html">Read article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card page-2" data-category="social-media" data-page="2" style="display:none">
+                    <div class="blog-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&h=400&fit=crop&q=80" alt="Social Media Design System">
+                        <div class="blog-category">Social Media</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Mar 2026</span>
+                            <span class="blog-read-time">9 min read</span>
+                        </div>
+                        <h3>Why Your Social Media Looks Like Three Different Brands</h3>
+                        <p>Inconsistent social media isn't a content problem. It's a design system problem. Here's what that means and how to fix it.</p>
+                        <a class="blog-link" href="blog/social-media-design-system.html">Read article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card page-2" data-category="web-design" data-page="2" style="display:none">
+                    <div class="blog-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop&q=80" alt="Mobile-First Design">
+                        <div class="blog-category">Web Design</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Aug 2025</span>
+                            <span class="blog-read-time">7 min read</span>
+                        </div>
+                        <h3>Mobile-First Is Not a Trend. It's the Default.</h3>
+                        <p>58% of your web traffic is mobile. Designing for desktop first is designing for the minority. Here's how to get it right.</p>
+                        <a class="blog-link" href="blog/mobile-first-design.html">Read article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card page-2" data-category="social-media" data-page="2" style="display:none">
+                    <div class="blog-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&h=400&fit=crop&q=80" alt="Social Media Design">
+                        <div class="blog-category">Social Media</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Sep 2024</span>
+                            <span class="blog-read-time">8 min read</span>
+                        </div>
+                        <h3>Random Posts Don't Build Brands</h3>
+                        <p>A social media design system is what separates brands that grow on social from brands that just post.</p>
+                        <a class="blog-link" href="blog/automated-email-sequences.html">Read article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card page-2" data-category="brand-strategy" data-page="2" style="display:none">
+                    <div class="blog-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=400&fit=crop&q=80" alt="Brand Positioning">
+                        <div class="blog-category">Brand Strategy</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Oct 2024</span>
+                            <span class="blog-read-time">10 min read</span>
+                        </div>
+                        <h3>How to Position Your Brand to Win</h3>
+                        <p>Positioning is the most important strategic decision a brand makes. Most businesses get it wrong — here's how to get it right.</p>
+                        <a class="blog-link" href="blog/advanced-brand-positioning.html">Read article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card page-2" data-category="brand-strategy" data-page="2" style="display:none">
+                    <div class="blog-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=400&fit=crop&q=80" alt="AI and Brand Design">
+                        <div class="blog-category">Brand Strategy</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Jan 2025</span>
+                            <span class="blog-read-time">10 min read</span>
+                        </div>
+                        <h3>AI and Brand Design — What Changes, What Doesn't</h3>
+                        <p>AI is changing how brands are built. Here's what it can do, what it can't, and how to use it without losing what makes your brand distinctive.</p>
+                        <a class="blog-link" href="blog/ai-powered-marketing.html">Read article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card page-2" data-category="growth" data-page="2" style="display:none">
+                    <div class="blog-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop&q=80" alt="Premium Brand System">
+                        <div class="blog-category">Growth</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">Mar 2026</span>
+                            <span class="blog-read-time">9 min read</span>
+                        </div>
+                        <h3>When a Logo Isn't Enough Anymore</h3>
+                        <p>At a certain stage of growth, a logo and a website aren't enough. Here's what a complete brand system looks like — and when you need one.</p>
+                        <a class="blog-link" href="blog/sustainable-growth-systems.html">Read article →</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="pagination" id="pagination">
+                <button class="pagination-btn" id="prevBtn" disabled>← Prev</button>
+                <button class="pagination-btn active page-btn" data-page="1">1</button>
+                <button class="pagination-btn page-btn" data-page="2">2</button>
+                <button class="pagination-btn" id="nextBtn">Next →</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="solutions" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="newsletter-cta">
+                <div class="newsletter-cta-text">
+                    <h2>Stay in the loop</h2>
+                    <p>Get the latest brand strategy insights and articles delivered to your inbox.</p>
+                </div>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event);">
+                    <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">EagleTech Studio</div>
+                    <p>Brand Systems for Serious Growth</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href='about.html'>About</a></li>
+                        <li><a href='contact.html'>Contact</a></li>
+                        <li><a href='blog.html'>Blog</a></li>
+                        <li><a href='pricing.html'>Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href='products.html#brand-identity'>Brand Identity</a></li>
+                        <li><a href='products.html#brand-identity'>Web Design</a></li>
+                        <li><a href='products.html#brand-identity'>Brand Strategy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href='blog.html'>Blog</a></li>
+                        <li><a href='about.html#case-studies'>Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href='privacy-policy.html'>Privacy Policy</a></li>
+                        <li><a href='terms-of-service.html'>Terms of Service</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 EagleTech Studio. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function subscribeNewsletter(e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletterEmail').value;
+            if (!email) return;
+            const subject = encodeURIComponent('Newsletter Subscription');
+            const body = encodeURIComponent('Please add me to your newsletter.\n\nEmail: ' + email);
+            window.location.href = 'mailto:hello@eagletechstudio.com?subject=' + subject + '&body=' + body;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeMobileMenu();
+            });
+            document.addEventListener('click', function(e) {
+                const navMenu = document.getElementById('navMenu');
+                const menuToggle = document.querySelector('.mobile-menu-toggle');
+                const isMenuOpen = navMenu.classList.contains('open');
+                if (isMenuOpen && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            });
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                const navMenu = document.getElementById('navMenu');
+                if (navMenu.classList.contains('open')) {
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(closeMobileMenu, 100);
+                }
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) closeMobileMenu();
+            });
+        });
+
+        let currentPage = 1;
+        const totalPages = 2;
+
+        function showPage(pageNumber) {
+            currentPage = pageNumber;
+            const allCards = document.querySelectorAll('.blog-card');
+            const pageButtons = document.querySelectorAll('.page-btn');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            allCards.forEach(card => card.style.display = 'none');
+
+            document.querySelectorAll('.page-' + pageNumber).forEach(card => {
+                card.style.display = 'flex';
+                card.style.flexDirection = 'column';
+                card.style.animation = 'fadeIn 0.3s ease-in';
+            });
+
+            const featured = document.querySelector('.page-' + pageNumber + '.featured');
+            if (featured) featured.style.display = '';
+
+            pageButtons.forEach(btn => {
+                const isActive = parseInt(btn.getAttribute('data-page')) === pageNumber;
+                btn.classList.toggle('active', isActive);
+            });
+
+            prevBtn.disabled = pageNumber === 1;
+            nextBtn.disabled = pageNumber === totalPages;
+
+            document.getElementById('articles').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.querySelectorAll('.page-btn').forEach(btn => {
+            btn.addEventListener('click', () => showPage(parseInt(btn.getAttribute('data-page'))));
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentPage > 1) showPage(currentPage - 1);
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentPage < totalPages) showPage(currentPage + 1);
+        });
+
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.getAttribute('data-filter');
+                document.querySelectorAll('.page-' + currentPage).forEach(card => {
+                    const match = filter === 'all' || card.getAttribute('data-category') === filter;
+                    if (match) {
+                        card.style.display = card.classList.contains('featured') ? '' : 'flex';
+                        card.style.flexDirection = 'column';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
