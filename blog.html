@@ -59,13 +59,13 @@
                     </button>
                     <button class="btn-hero-outline" onclick="window.location.href='contact.html'">Subscribe</button>
                 </div>
-                <div class="blog-hero-stats">
+                <div class="blog-hero-stats" id="blogHeroStats">
                     <div class="blog-hero-stat">
-                        <span class="blog-hero-num">150+</span>
+                        <span class="blog-hero-num" data-target="150" data-suffix="+">0</span>
                         <span class="blog-hero-label">Articles</span>
                     </div>
                     <div class="blog-hero-stat">
-                        <span class="blog-hero-num">25K+</span>
+                        <span class="blog-hero-num" data-target="25" data-suffix="K+">0</span>
                         <span class="blog-hero-label">Readers</span>
                     </div>
                     <div class="blog-hero-stat">
@@ -410,6 +410,35 @@
             window.addEventListener('resize', function() {
                 if (window.innerWidth > 768) closeMobileMenu();
             });
+
+            const statsContainer = document.getElementById('blogHeroStats');
+            if (statsContainer) {
+                let animated = false;
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !animated) {
+                            animated = true;
+                            const counters = statsContainer.querySelectorAll('[data-target]');
+                            counters.forEach((el, i) => {
+                                const target = parseInt(el.getAttribute('data-target'));
+                                const suffix = el.getAttribute('data-suffix') || '';
+                                const duration = 2000;
+                                const start = performance.now();
+                                function tick(now) {
+                                    const p = Math.min((now - start) / duration, 1);
+                                    const ease = 1 - Math.pow(1 - p, 3);
+                                    el.textContent = Math.floor(ease * target) + suffix;
+                                    if (p < 1) requestAnimationFrame(tick);
+                                    else el.textContent = target + suffix;
+                                }
+                                setTimeout(() => requestAnimationFrame(tick), i * 200);
+                            });
+                            observer.unobserve(statsContainer);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                observer.observe(statsContainer);
+            }
         });
 
         let currentPage = 1;
