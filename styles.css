@@ -2280,7 +2280,7 @@ a:hover {
 }
 
 .process-step { background: var(--bg-card); transition: background var(--transition-medium); }
-.process-step:hover { background: rgba(255,255,255,0.04); }
+.process-step:hover { background: #111d31; }
 
 .process-step-card {
   padding: 2rem 1.75rem;
