@@ -391,30 +391,26 @@
             <div class="trust-inner">
                 <div class="trust-left">
                     <span class="trust-eyebrow">Trusted by Growing Brands</span>
-                    <h2>Numbers that<br>speak for themselves.</h2>
-                    <p>Innovators, creatives, and forward-thinking businesses trust EagleTech Studio to build brands that perform and systems that scale.</p>
-                    <a href="contact.html" class="btn-primary">Start Your Project</a>
+                    <h2>Built for brands<br>that mean business.</h2>
+                    <p>EagleTech Studio helps ambitious businesses build stronger identities, smarter digital experiences, and brand systems they can truly own.</p>
+                    <a href="contact.html" class="btn-primary">Start Your Brand Project</a>
                 </div>
                 <div class="trust-stats">
                     <div class="trust-stat">
-                        <div class="trust-stat-number" data-target="250" data-suffix="+">0+</div>
-                        <div class="trust-stat-label">Brands served</div>
-                        <div class="trust-stat-desc">Across startups, SMEs, and enterprise organisations</div>
+                        <div class="trust-stat-label">Brand Identity</div>
+                        <div class="trust-stat-desc">Logo suites, colour systems, typography, and full identity guidelines</div>
                     </div>
                     <div class="trust-stat">
-                        <div class="trust-stat-number" data-target="98" data-suffix="%">0%</div>
-                        <div class="trust-stat-label">Client retention</div>
-                        <div class="trust-stat-desc">Clients who return for their next project or phase</div>
+                        <div class="trust-stat-label">Web & Digital</div>
+                        <div class="trust-stat-desc">High-performance websites, UI/UX design, and digital experiences</div>
                     </div>
                     <div class="trust-stat">
-                        <div class="trust-stat-number" data-target="15" data-suffix="+">0+</div>
-                        <div class="trust-stat-label">Countries served</div>
-                        <div class="trust-stat-desc">Global reach with a consistent standard of work</div>
+                        <div class="trust-stat-label">Brand Strategy</div>
+                        <div class="trust-stat-desc">Positioning, messaging, audience strategy, and growth roadmaps</div>
                     </div>
                     <div class="trust-stat">
-                        <div class="trust-stat-number" data-target="4" data-suffix=" yrs">0 yrs</div>
-                        <div class="trust-stat-label">In operation</div>
-                        <div class="trust-stat-desc">Building brands and digital systems since 2020</div>
+                        <div class="trust-stat-label">100% Client-Owned</div>
+                        <div class="trust-stat-desc">Every file, template, and guideline — yours on delivery. No retainers.</div>
                     </div>
                 </div>
             </div>
@@ -492,48 +488,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const animateCounter = (element) => {
-                const target = parseInt(element.getAttribute('data-target'));
-                const suffix = element.getAttribute('data-suffix') || '';
-                const duration = 2000;
-                const increment = target / (duration / 16);
-                let current = 0;
-                const updateCounter = () => {
-                    current += increment;
-                    if (current < target) {
-                        element.textContent = Math.floor(current) + suffix;
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        element.textContent = target + suffix;
-                    }
-                };
-                updateCounter();
-            };
-            const statsObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const statsNumbers = entry.target.querySelectorAll('.trust-stat-number');
-                        statsNumbers.forEach(stat => {
-                            const target = parseInt(stat.getAttribute('data-target'));
-                            const text = stat.textContent;
-                            const suffix = text.includes('%') ? '%' : text.includes('+') ? '+' : '';
-                            stat.setAttribute('data-suffix', suffix);
-                            stat.style.opacity = '0';
-                            setTimeout(() => {
-                                stat.style.transition = 'opacity 0.5s ease';
-                                stat.style.opacity = '1';
-                                animateCounter(stat);
-                            }, 100);
-                        });
-                        statsObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-            const statsSection = document.querySelector('.trust-stat-number');
-            if (statsSection) {
-                const statsContainer = statsSection.closest('.trust-stats');
-                statsObserver.observe(statsContainer);
-            }
             const navLinks = document.querySelectorAll('.nav-links a');
             navLinks.forEach(link => {
                 link.addEventListener('click', closeMobileMenu);

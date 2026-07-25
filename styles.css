@@ -3693,6 +3693,14 @@ body {
 
 .segment-card--featured .segment-card-top h3 { color: #ffffff; }
 
+.segment-need {
+  font-size: 0.8125rem;
+  color: var(--primary-light);
+  font-weight: 600;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
 .segment-card-body {
   padding: 1.5rem 2rem;
   flex-grow: 1;
