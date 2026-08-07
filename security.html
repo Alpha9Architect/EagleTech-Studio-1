@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security | EagleTech Studio</title>
+    <meta name="description" content="EagleTech Studio’s approach to keeping our website and your data secure.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://eagletech-studio-1.vercel.app/security.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="nav.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a class='logo' href='/'><picture><source type="image/webp" srcset="images/eagletech-logo.webp"><img src="images/eagletech-logo.png" alt="EagleTech Studio" width="320" height="160"></picture></a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                <div class="hamburger"><span></span><span></span><span></span></div>
+            </button>
+            <div class="nav-menu" id="navMenu">
+                <div class="nav-links">
+                    <a href='/'>Home</a>
+                    <a href='products.html'>Services</a>
+                    <a href='about.html'>About</a>
+                    <a href='pricing.html'>Pricing</a>
+                    <a href='contact.html'>Contact</a>
+                    <a href='blog.html'>Blog</a>
+                </div>
+                <button class="btn-get-started" onclick="location.href='contact.html'">Get Started</button>
+            </div>
+        </div>
+        <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
+    </nav>
+    <section class="legal-page">
+        <div class="container">
+            <div class="legal-header">
+                <h1>Security</h1>
+                <p class="legal-date">Last updated: August 7, 2026</p>
+                <p class="legal-intro">Security is a core part of doing business responsibly. This page describes the measures EagleTech Studio takes to protect our website and the information you share with us.</p>
+            </div>
+            <div class="legal-content">
+                            <nav class="legal-toc">
+                <h3>On this page</h3>
+                <ol>
+                    <li><a href="#sec1">Our approach</a></li>
+                    <li><a href="#sec2">Website security</a></li>
+                    <li><a href="#sec3">Data handling</a></li>
+                    <li><a href="#sec4">Third-party services</a></li>
+                    <li><a href="#sec5">Reporting</a></li>
+                    <li><a href="#sec6">Limitations</a></li>
+                    <li><a href="#sec7">Contact</a></li>
+                </ol>
+            </nav>
+                <div class="legal-sections">
+
+                <div class="legal-section" id="sec1">
+                    <h2>Our approach to security</h2>
+                    <p>We design, build, and operate our website with security in mind. This means using up-to-date platforms, minimising the data we collect, and applying reasonable safeguards to protect it.</p>
+                </div>
+
+                <div class="legal-section" id="sec2">
+                    <h2>Website security</h2>
+                    <p>Our site is served over HTTPS, which encrypts data in transit between your browser and our servers. The hosting provider operates managed infrastructure with its own security and uptime controls.</p>
+                </div>
+
+                <div class="legal-section" id="sec3">
+                    <h2>What we don’t do</h2>
+                    <p>Our website is a static marketing site. We do not collect passwords, payment card details, or sensitive personal data through this site. If we take payment for services, it is handled through established payment processors under their own security standards.</p>
+                </div>
+
+                <div class="legal-section" id="sec4">
+                    <h2>Third-party services</h2>
+                    <p>We use reputable third-party services for specific functions such as hosting and fonts. These providers maintain their own security practices, and we rely on them to protect their part of the chain.</p>
+                </div>
+
+                <div class="legal-section" id="sec5">
+                    <h2>Reporting and vulnerabilities</h2>
+                    <p>If you believe you have found a security issue on our website, please contact us. We take legitimate reports seriously and will work to address genuine issues. Please act in good faith and do not attempt to disrupt the site for others.</p>
+                </div>
+
+                <div class="legal-section" id="sec6">
+                    <h2>What you can do</h2>
+                    <p>Protect the account or device you use to communicate with us, and be cautious with the messages about our brand to avoid phishing. While we work hard to keep things secure, no website can guarantee absolute security without risk.</p>
+                </div>
+
+                <div class="legal-section" id="sec7">
+                    <h2>Contact</h2>
+                    <div class="legal-contact"><div class="contact-item"><strong>Email:</strong> hello@eagletechstudio.com</div><div class="contact-item"><strong>Website:</strong> eagletech-studio-1.vercel.app</div></div>
+                </div>
+                </div>
+            </div>
+            <div class="legal-footer-note">
+                Questions? Email <strong>hello@eagletechstudio.com</strong> or <a href="contact.html">contact us</a>.
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">EagleTech Studio</div>
+                    <p>Brand Systems for Serious Growth</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href='about.html'>About</a></li>
+                        <li><a href='contact.html'>Contact</a></li>
+                        <li><a href='blog.html'>Blog</a></li>
+                        <li><a href='pricing.html'>Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href='products.html#brand-identity'>Brand Identity</a></li>
+                        <li><a href='products.html#brand-identity'>Web Design</a></li>
+                        <li><a href='products.html#brand-identity'>Brand Strategy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href='blog.html'>Blog</a></li>
+                        <li><a href='about.html#case-studies'>Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href='privacy-policy.html'>Privacy Policy</a></li>
+                        <li><a href='terms-of-service.html'>Terms of Service</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 EagleTech Studio. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => { link.addEventListener('click', closeMobileMenu); });
+            document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMobileMenu(); });
+            document.addEventListener('click', function(e) {
+                const navMenu = document.getElementById('navMenu');
+                const menuToggle = document.querySelector('.mobile-menu-toggle');
+                const isMenuOpen = navMenu.classList.contains('open');
+                if (isMenuOpen && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) closeMobileMenu();
+            });
+            window.addEventListener('resize', function() { if (window.innerWidth > 768) closeMobileMenu(); });
+        });
+    </script>
+</body>
+</html>
