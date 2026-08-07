@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://eagletech-studio-1.vercel.app/sitemap.xml
+
