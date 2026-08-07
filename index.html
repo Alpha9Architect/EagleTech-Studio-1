@@ -407,7 +407,7 @@
                     <p>Brand work should move numbers. We track engagement, conversion, and recognition and show you the data. If it's not working, we fix it.</p>
                 </div>
                 <div class="why-card why-card--dark">
-                    <div class="why-stat">100%</div>
+                    <div class="why-stat" data-target="100" data-suffix="%">0%</div>
                     <p>Client-owned assets. Every file, every template, yours on delivery.</p>
                     <a href="about.html#case-studies" class="why-link">See the work →</a>
                 </div>
@@ -529,6 +529,33 @@
         </div>
     </footer>
 
+    <script>
+        const whyStat = document.querySelector('[data-target]');
+        if (whyStat) {
+            let animated = false;
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !animated) {
+                        animated = true;
+                        const target = parseInt(whyStat.getAttribute('data-target'));
+                        const suffix = whyStat.getAttribute('data-suffix') || '';
+                        const duration = 1600;
+                        const start = performance.now();
+                        function tick(now) {
+                            const p = Math.min((now - start) / duration, 1);
+                            const ease = 1 - Math.pow(1 - p, 3);
+                            whyStat.textContent = Math.floor(ease * target) + suffix;
+                            if (p < 1) requestAnimationFrame(tick);
+                            else whyStat.textContent = target + suffix;
+                        }
+                        requestAnimationFrame(tick);
+                        observer.unobserve(whyStat);
+                    }
+                });
+            }, { threshold: 0.5 });
+            observer.observe(whyStat);
+        }
+    </script>
 
 </body>
 </html>
